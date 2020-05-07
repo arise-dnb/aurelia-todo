@@ -1,6 +1,14 @@
 <template>
   <h1>${message}</h1>
+  <table>
+    <tr>
+      <td> <a route-href="home">Home</a> </td>
+      <td> <a route-href="about">About</a> </td>
+    </tr>
+  </table>
+
   <router-view></router-view>
+
   <table>
     <tr repeat.for="todo of todoList">
       <td><input type="checkbox" checked.bind="todo.done" /></td>

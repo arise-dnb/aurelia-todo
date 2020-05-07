@@ -21,7 +21,8 @@ export class App {
   configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'Router Test';
     config.map([
-      {route: '', name: 'home', moduleId: PLATFORM.moduleName('index'), title: 'Home'}
+      {route: '', name: 'home', moduleId: PLATFORM.moduleName('index'), title: 'Home'},
+      {route: 'about', name: 'about', moduleId: PLATFORM.moduleName('about'), title: 'About Me'}
     ]);
   }
 
@@ -36,26 +37,3 @@ export class App {
 
 
 }
-
-/**
-import {Router, RouterConfiguration} from 'aurelia-router';
-import {inject, PLATFORM} from 'aurelia-framework';
-import {WebAPI} from './web-api';
-
-@inject(WebAPI)
-export class App {
-  router: Router;
-
-  configureRouter(config: RouterConfiguration, router: Router){
-    config.title = 'Contacts';
-    config.options.pushState = true;
-    config.options.root = '/';
-    config.map([
-      { route: '',              moduleId: PLATFORM.moduleName('no-selection'),   title: 'Select' },
-      { route: 'contacts/:id',  moduleId: PLATFORM.moduleName('contact-detail'), name:'contacts' }
-    ]);
-
-    this.router = router;
-  }
-}
- **/
