@@ -1,8 +1,12 @@
 export class Todo {
+  description: string;
+  done: boolean;
 
-  constructor (description) {
+  constructor (description: string) {
     this.description = description;
     this.done = false;
   }
+
+
 
 }
