@@ -1,5 +1,12 @@
-import {Todo} from './todo.ts';
+import {Todo} from './todo';
 
 export class App {
-  public message: string = 'Hello World!';
+  public message: string;
+  public todo: Todo;
+
+  constructor() {
+    this.message = 'Hello World!';
+    this.todo = new Todo('Clean my room');
+  }
+
 }
