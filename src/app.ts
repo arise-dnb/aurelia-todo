@@ -22,4 +22,12 @@ export class App {
   removeTodo(todo) {
     this.todoList.splice(this.todoList.indexOf(todo), 1);
   }
+
+  configureRouter(config, router) {
+    config.title = 'Router Test';
+    config.map([
+      {},
+      {}
+    ])
+  }
 }
