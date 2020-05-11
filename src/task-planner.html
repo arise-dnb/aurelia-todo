@@ -4,7 +4,7 @@
       <tr repeat.for="todo of todoList">
         <td width="5%"><input type="checkbox" checked.bind="todo.done" /></td>
         <td css="text-decoration: ${todo.done ? 'line-through' : 'none'}">${todo.description}</td>
-        <td><button click.delegate="removeTodo(todo)" class="btn btn-outline-dangerIMpo">Remove</button></td>
+        <td><button click.delegate="removeTodo(todo)" class="btn btn-outline-danger">Remove</button></td>
       </tr>
     </table>
     <br>
