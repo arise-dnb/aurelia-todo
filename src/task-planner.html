@@ -1,0 +1,18 @@
+<template>
+  <div id="todo-table">
+    <table id="task-table">
+      <tr repeat.for="todo of todoList">
+        <td width="5%"><input type="checkbox" checked.bind="todo.done" /></td>
+        <td css="text-decoration: ${todo.done ? 'line-through' : 'none'}">${todo.description}</td>
+        <td><button click.delegate="removeTodo(todo)" class="btn btn-outline-dangerIMpo">Remove</button></td>
+      </tr>
+    </table>
+    <br>
+  </div>
+
+  <div id="todo-add">
+    <input type="text" value.bind="newItem" />
+    <button click.delegate="addTodo()" class="btn btn-primary">Add</button>
+  </div>
+
+</template>

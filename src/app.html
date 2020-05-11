@@ -1,22 +1,18 @@
 <template>
-  <h1>${message}</h1>
-  <table>
-    <tr>
-      <td> <a route-href="home">Home</a> </td>
-      <td> <a route-href="about">About</a> </td>
-      <td> <a route-href="route: post; params.bind: {slug: 'aurelia-router-tutorial'}">Aurelia Router Tutorial Post</a> </td>
-    </tr>
-  </table>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
 
-  <router-view></router-view>
+  <div class="app-wrapper">
+    <nav class="navbar-dark bg-primary">
+      <h1>${message}</h1>
+      <a class="navbar-brand" route-href="home">Home</a>
+      <a class="navbar-brand" route-href="todo">ToDo-List</a>
+      <a class="navbar-brand" route-href="about">About</a>
+      <a class="navbar-brand" route-href="route: post; params.bind: {slug: 'aurelia-router-tutorial'}">Aurelia Router Tutorial Post</a>
+    </nav>
 
-  <table>
-    <tr repeat.for="todo of todoList">
-      <td><input type="checkbox" checked.bind="todo.done" /></td>
-      <td css="text-decoration: ${todo.done ? 'line-through' : 'none'}">${todo.description}</td>
-      <td><button click.delegate="removeTodo(todo)">Remove</button></td>
-    </tr>
-  </table>
+    <div class="app-body">
+      <router-view></router-view>
+    </div>
 
-  <input type="text" value.bind="newItem" /> <button click.delegate="addTodo()">Add</button>
+  </div>
 </template>

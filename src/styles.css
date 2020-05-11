@@ -1,0 +1,27 @@
+body {
+  font-family: "Roboto", "SansSerif";
+}
+
+h1 {
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+}
+
+.app-wrapper {
+  padding: 2% 7%;
+}
+
+.navbar-dark {
+  padding-top: 40px;
+  padding-left: 20px;
+  font-family: "Source Sans Pro";
+}
+
+.app-body {
+  padding-top: 40px;
+  padding-left: 20px;
+}
+
+#task-table {
+  width: 80%;
+}
